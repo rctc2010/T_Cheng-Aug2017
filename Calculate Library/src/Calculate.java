@@ -20,9 +20,8 @@ public final class Calculate {
 
 	//average the input 
 	public static double average (double oprand) {
-		double average =(oprand+oprand+oprand)/3;
+		double average =(oprand+oprand)/2;
 		return average;
 	}
 
 	
-	//
