@@ -23,4 +23,6 @@ public final class Calculate {
 		double average =(oprand+oprand+oprand)/3;
 		return average;
 	}
-}
+
+	
+	//
