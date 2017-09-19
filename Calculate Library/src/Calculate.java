@@ -147,6 +147,86 @@ public final class Calculate {
 		return value;
 		
 	}
+	// Part 3: Methods that use Loops and Calls to Other Methods
+	
+		public static double exponent (double base, int power) { // accepts a double and an integer and returns a double
+			// raises a value to a positive integer power
+			if (power < 0) {
+				throw new IllegalArgumentException("negative exponent: " + power);
+			}
+			double answer = 1;
+			for (int i = 1; i <= power; i++) {
+				answer *= base;
+			}
+			return answer;
+		}
+		
+		public static int factorial (int a) { // accepts an integer and returns an integer
+			// returns the factorial of the value passed
+			if (a < 0) {
+				throw new IllegalArgumentException("negative a: " + a);
+			}
+			int answer = 1;
+		    for ( int i = 2; i <= a; i++ ) {  
+		        answer *= i;
+		    }  
+		    return answer;
+		}  
+		
+		public static boolean isPrime (int a) { // accepts an integer and returns a boolean
+			// determines whether or not an integer is prime
+		    boolean check;
+		    if (a > 1) {
+		    	for (int i = a - 1; i > 1; i--) {
+		    		check = Calculate.isDivisibleBy(a, i);
+		    		if (check == true) {
+		    			return false;
+		    		}
+		    	}
+		    } else {
+		    	return false;
+		    }
+		    return true;
+			}
+
+		public static int gcf (int num1, int num2) { // accepts two positive integers and returns an integer
+			// finds the greatest common factor of two integers
+			while (num2 != 0) {
+				int c = num1;
+				num1 = num2;
+				num2 = c % num2;
+			}
+			return (int)Calculate.absValue(num1);
+		}
+		
+		public static double sqrt (double a) { // accepts and returns a double
+			// returns an approximation of the square root of the value passed, accurate to two decimal places
+			if (a < 0) {
+				throw new IllegalArgumentException ("negative a:" + a);
+			}
+			return Math.sqrt(a);
+		}
+	// Part 4: Throwing Exceptions
+			// 1. See factorial, exponent, isDivisibleBy, and sqrt
+			// 2.
+		public static String quadForm (int a, int b, int c) { // accepts three integers and returns a String
+			// uses the coefficients of a quadratic equation in standard form and uses the quadratic formula to approximate the real roots
+			double answer = Calculate.discriminant(a, b, c);
+			double discriminantRoot = Calculate.sqrt(answer);
+			double root1 = (-b + discriminantRoot) / (2 * a);
+			double root2 = (-b - discriminantRoot) / (2 * a);
+			if (answer < 0) {
+			   return ("no real roots");
+			} else if (answer > 0) {
+			   return (root1 + " and " + root2);
+			} else if (answer == 0) {
+			   return (root1 + " ");
+			}
+		    return 0 + "";
+			}
+		
+	}
+
 }
 	
 	
