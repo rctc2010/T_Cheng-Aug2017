@@ -17,10 +17,10 @@ public class DoMatch {
 		System.out.println(Calculate.foil(2, 3, 6, -7, "n"));
 		System.out.println(Calculate.isDivisibleBy(8, 2));
 		System.out.println(Calculate.absValue(1.5));
-		System.out.println(Calculate.max(1.5, 3.5));
+		
 		System.out.println(Calculate.max(1.5, 3.5, 5.5));
 		System.out.println(Calculate.min(10, 5));
-		System.out.println(Calculate.round2);
+	
 		
 	}
 
