@@ -3,7 +3,7 @@
  * Part 5:
  * This program calls the class Quadratic, which includes 
  * methods from the Calculate Library to describe the graph 
- * of a quadratic function." 
+ * of a quadratic function. 
  * It will prompt the user to enter coefficients of a quadratic 
  * function in standard form and provide a description of the graph 
  * (the direction it opens, where its vertex is, and its intercepts).

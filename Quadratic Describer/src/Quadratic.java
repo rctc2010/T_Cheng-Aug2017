@@ -2,7 +2,7 @@
  * October 17, 2017
  * Part 5:
  * This program includes methods from the Calculate Library
- *  to describe the graph of a quadratic function." 
+ *  to describe the graph of a quadratic function. 
  */
 
 public class Quadratic {
